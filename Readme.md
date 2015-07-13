@@ -17,39 +17,44 @@ languages: javascript
 + A loop that doesn't have a valid exit condition will run forever and is called an infinite loop. These are bad, most of the time
 
 ##Concept
-A loop is one of the foundational tools in any programmer's toolkit. It allows a bit of code to be repeated many times. This can be useful in many circumstances but is often used in conjunction with arrays. Arrays can have any number of elements and a loop allows us to access each one of those elements and do something with it.
+A loop is one of the foundational tools in any programmer's toolkit. It allows a bit of code to be repeated many times. 
 
-Let's start with an example array of numbers. Get an example set from a student and make an integer based array. (Ask a few review questions: add a number? index? etc…)
-Ok, what if we want to do something to each number. Like add one to each number. We could do it manually:
+This can be useful in many circumstances but is often used with arrays. Arrays can have any number of elements and a loop allows us to access each one of those elements and do something with it.
+
+Let's start with an example array of numbers. 
 ```
-numbers[0] = numbers[0] + 1;
-numbers[1] = numbers[1] + 1;
-number[2] = numbers[2] + 1;
+var numbers = [0, 1, 2, 5, 9]
 ```
-This would take forever though, and what happens when we add or remove something to the array? We would have to add or remove a line of code. This is bad.
+Ok, what if we want to do something to each number. Like multiply each number by 5. We could do it manually:
+```
+numbers[0] = numbers[0] * 5;
+numbers[1] = numbers[1] * 5;
+number[2] = numbers[2] * 5;
+```
+This would take forever.
 
 A better way to do this is to set up a little machine with instructions on how to iterate (go through) every number in the array and do something specific to each one. We call this a loop.
 There are two basic types of loops in JavaScript: for loops and while loops. They generally accomplish the same thing but their syntax is different.
 
 ##While loop
-Let's say we want to make a while loop that adds one to every number in our numbers array. It would look like this:
+Let's say we want to make a while loop that multiplies every number in our numbers array by 5. It would look like this:
 ```
 var numbers = [0, 1, 2, 5, 9];
 var i = 0;
 while (i < numbers.length)
 {
-  numbers[i] = numbers[i] + 1;
+  numbers[i] = numbers[i] * 5;
   i = i + 1;
 }
 ```
-Let's break this down.
-var i = 0; is the initialization of our counter variable. Because we increment it with i = i + 1it keeps count of which iteration (or cycle) we're on.
 
-i < numbers.length is our exit condition. This is evaluated at the beginning of every loop, if it isn't true we stop looping and move to the code after the loop.
+* `var i = 0`; is the initialization of our counter variable. Because we increment it with `i = i + 1` it keeps count of which iteration (or cycle) we're on.
 
-numbers[i] = numbers[i] + 1; is the code we execute on every loop. This adds 1 to each number in the array.
+* `i < numbers.length`; is our exit condition. This is evaluated at the beginning of every loop, if it isn't true we stop looping and move to the code after the loop.
 
-i = i + 1 is where we increment our counter. This will usually increase by 1, but doesn't have to. What would happen if we incremented by 2?
+* `numbers[i] = numbers[i] * 5`; is the code we execute on every loop. This multiplies each number in the array by five.
+
+* `i = i + 1` is where we increment our counter. This will usually increase by 1, but doesn't have to.
 
 Try using console.log(numbers); both before and after the loop to see how our array has changed. Try using alert(numbers); instead
 
@@ -59,29 +64,30 @@ We can accomplish the exact same thing with the more concise for loop. It would 
 var numbers = [0, 1, 2, 5, 9];
 for(var i = 0; i < numbers.length; i = i + 1;)
 {
-  numbers[i] = numbers[i] + 1;
+  numbers[i] = numbers[i] * 5;
 }
 ```
 In a for loop, our initialization, exit condition, and increment all happen in one line separated by a semicolon ;.
 
 Let’s walk through each part of this.
 + `for` is the keyword that we use to set up a loop
-+ Inside of the parentheses is where we set up the conditions of our loop
-+ We start off by declaring the starting conditions, or initialization
-+ We usually have a counter variable **i** set to 0. The first index in our array is 0 - so we want to set up our little machine to pull out each item in the array starting with the item at index 0.
-+ It’s convention to use the variable i because i is short for index - we are counting through the indices of the of the array
-+ We close this condition with a ; to indicate that we are done with these starting instructions for our machine and we’re ready to declare the exit condition
-+ In the next part of our for loop we set up the exit condition for our machine - it’s like saying this machine should keep going until this condition is true
-+ The condition here is that our variable i must be less than numbers.length.
-+ The last condition of the for loop are instructions for how to keep our machine moving. Here we are saying - at the end of each iteration in the loop add one to var i.
++ Inside of the parentheses is where we set up the conditions of our loop: 
+  +   `var i = 0` - A counter variable **i** is set to 0. It’s convention to use the variable i because i is short for index 
+  + `i < numbers.length`- In the next part of the conditions, we set up the exit condition for our machine : our variable i must be less than numbers.length. If this is not met, the loop is exited.
+  + `i = i + 1`- The last condition of the for loop are instructions for how to keep our machine moving. Here we are saying - at the end of each iteration in the loop add one to var i.
 
++ Inside the curly brackets are instructions for what should happen to each element that we loop through
+  + `numbers[i] = numbers[i] * 5` - For each element, reassign that element a value that is five times greater. 
 ##Practice
-Create a iteration.js doc.  Try setting up a for loop with a numbers array -  print out each number, doubled.
+Create a iteration.js doc. 
+
+###Part 1, A Loop with  Numbers
+Try setting up a for loop with a numbers array -  print out each number, doubled.
 
 Wrap your loop in a function that accepts a numbers array instead of hardcoding one specific array into the function. Why would that be better?
 
 Set up a new numbers array and call your doubleNumbers array with your new array.
-
+###Part 2, A Loop with String Methods
 Create an array of your top 5 favorites movies. Now create a function called myFavorites().
 
 This function should
