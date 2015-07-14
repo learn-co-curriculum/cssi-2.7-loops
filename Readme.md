@@ -48,13 +48,13 @@ while (i < numbers.length)
 }
 ```
 
-* `var i = 0`; is the initialization of our counter variable. Because we increment it with `i = i + 1` it keeps count of which iteration (or cycle) we're on.
+* `var i = 0`; is the initialization of our counter variable. We will use it to keep count of which iteration (or cycle) we're on.
 
 * `i < numbers.length`; is our exit condition. This is evaluated at the beginning of every loop, if it isn't true we stop looping and move to the code after the loop.
 
 * `numbers[i] = numbers[i] * 5`; is the code we execute on every loop. This multiplies each number in the array by five.
 
-* `i = i + 1` is where we increment our counter. This will usually increase by 1, but doesn't have to.
+* `i = i + 1` is where we increment our counter. In this case, we increase it by one, so it works as a counter, but it doesn't have to.
 
 Try using console.log(numbers); both before and after the loop to see how our array has changed. Try using alert(numbers); instead
 
@@ -62,12 +62,12 @@ Try using console.log(numbers); both before and after the loop to see how our ar
 We can accomplish the exact same thing with the more concise for loop. It would look like this:
 ```
 var numbers = [0, 1, 2, 5, 9];
-for(var i = 0; i < numbers.length; i = i + 1;)
+for(var i = 0; i < numbers.length; i = i + 1)
 {
   numbers[i] = numbers[i] * 5;
 }
 ```
-In a for loop, our initialization, exit condition, and increment all happen in one line separated by a semicolon ;.
+In a for loop, our initialization, exit condition, and increment all happen in one line separated by a semicolon `;`.
 
 Let’s walk through each part of this.
 + `for` is the keyword that we use to set up a loop
