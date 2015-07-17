@@ -95,3 +95,6 @@ This function should
 + for each favorite, it should alert to the screen something like “The Shawshank Redemption? That is my favorite too!”
 
 Now create a new array of your favorite songs. Try calling the myFavorites() function with the songs array.
+
+###Stretch: The Movie Critic
+Change myFavorites() into a _while_ function.  The condition  should check to make sure that the movie is not Demon Islan, Gigli or Santa with Muscles. 
