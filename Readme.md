@@ -78,15 +78,15 @@ Let’s walk through each part of this.
 
 + Inside the curly brackets are instructions for what should happen to each element that we loop through
   + `numbers[i] = numbers[i] * 5` - For each element, reassign that element a value that is five times greater. 
-##Practice
+
+## Student Practice
 Create a iteration.js doc. 
 
 ###Part 1, A Loop with  Numbers
-Try setting up a for loop with a numbers array -  print out each number, doubled.
+Set up a _for_ loop with a numbers array -  print out each number, doubled.
 
-Wrap your loop in a function that accepts a numbers array instead of hardcoding one specific array into the function. Why would that be better?
-
-Set up a new numbers array and call your doubleNumbers array with your new array.
+Next, wrap your loop in a function, doubleNumbers that accepts a numbers array instead of hardcoding one specific array into the function. 
+.
 ###Part 2, A Loop with String Methods
 Create an array of your top 5 favorites movies. Now create a function called myFavorites().
 
@@ -94,4 +94,4 @@ This function should
 + take in an array of favorites
 + for each favorite, it should alert to the screen something like “The Shawshank Redemption? That is my favorite too!”
 
-Now create a new array of your favorite songs. Try calling the myFavorites() function with your favorite songs array.
+Now create a new array of your favorite songs. Try calling the myFavorites() function with the songs array.
