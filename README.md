@@ -95,4 +95,4 @@ Now create a new array of your favorite songs. Try calling the myFavorites() fun
 ###Stretch: The Movie Critic
 Change myFavorites() into a _while_ function.  The condition  should check to make sure that the movie is not Demon Islan, Gigli or Santa with Muscles. 
 
-<a href='https://learn.co/lessons/cssi-2.7-loops' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/cssi-2.7-loops' title='Loops'>Loops</a> on Learn.co and start learning to code for free.</p>
